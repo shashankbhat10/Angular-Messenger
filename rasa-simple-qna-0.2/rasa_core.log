@@ -1,0 +1,38 @@
+2019-07-18 10:36:36,221 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/visualization.html'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /visualization.html not found
+2019-07-18 11:17:57,011 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-18 11:17:57,011 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-18 12:48:48,858 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\asyncio\base_events.py", line 465, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.
+2019-07-18 15:09:23,107 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "d:\anaconda\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-07-18 15:09:23,130 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "d:\anaconda\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-07-18 15:09:28,757 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "d:\anaconda\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
