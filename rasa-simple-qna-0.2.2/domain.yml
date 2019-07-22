@@ -1,0 +1,19 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - question
+
+actions:
+- utter_greet
+- action_answer
+- utter_goodbye
+
+
+templates:
+  utter_greet:
+  - text: "What can I help you with?"
+
+  utter_goodbye:
+  - text: "Happy to help!"

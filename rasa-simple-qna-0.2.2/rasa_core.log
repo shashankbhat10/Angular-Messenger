@@ -1,0 +1,248 @@
+2019-07-18 10:36:36,221 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/visualization.html'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /visualization.html not found
+2019-07-18 11:17:57,011 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-18 11:17:57,011 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-18 12:48:48,858 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\asyncio\base_events.py", line 465, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.
+2019-07-19 12:23:32,797 [ERROR]  Exception occurred while handling uri: 'http://127.0.0.1:5005/webhook/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/rest/webhook not found
+2019-07-19 12:23:35,393 [ERROR]  Exception occurred while handling uri: 'http://127.0.0.1:5005/webhook/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/rest/webhook not found
+2019-07-19 12:27:33,404 [ERROR]  Exception occurred while handling uri: 'http://127.0.0.1:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:28:25,436 [ERROR]  Exception occurred while handling uri: 'http://127.0.0.1:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:29:45,894 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:29:49,729 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:30:10,436 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:30:55,319 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:30:55,321 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:31:24,097 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:32:39,424 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 446, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /webhooks/rest/webhook
+2019-07-19 12:33:47,308 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:34:02,107 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:42:58,680 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:43:24,153 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:50:59,273 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:53:13,790 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 12:53:55,572 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 13:00:49,490 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 14:05:36,014 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 917, in handle_request
+    response = await response
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 443, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\rasa\core\channels\channel.py", line 403, in _extract_sender
+    return req.json.get("sender", None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2019-07-19 14:49:40,316 [ERROR]  Exception occurred while handling uri: 'http://127.0.0.1:5005/'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-07-19 14:49:40,866 [ERROR]  Exception occurred while handling uri: 'http://127.0.0.1:5005/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2019-07-19 14:58:41,566 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-07-19 15:00:34,960 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-07-19 15:04:15,933 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-07-19 15:05:15,956 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-07-19 15:06:05,044 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "c:\users\eg00625171\appdata\local\continuum\miniconda3\envs\rasa_env\lib\site-packages\sanic\server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
