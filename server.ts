@@ -3,6 +3,15 @@ import * as http from 'http';
 import * as https from 'https';
 import * as WebSocket from 'ws';
 import { AddressInfo } from 'net';
+import * as uid from 'uid-safe';
+
+
+import * as log4js from 'log4js';
+log4js.configure("D:/websocket-node-express-master/server/config/log4j.json");
+
+var logger = log4js.getLogger( "test-file-appender" );
+
+
 // import * as request from 'request';
 const querystring = require('querystring');
 const Q = require("q");
@@ -33,6 +42,10 @@ function createMessage(content: string, isBroadcast = false, sender = 'NS'): str
 
 wss.on('connection', (ws: WebSocket) => {
 
+    logger.info('messgfsdfd');
+    var uniqueID = uid.sync(18);
+    console.log(uniqueID);
+
     console.log("User connected");
     const extWs = ws as ExtWebSocket;
 
@@ -42,11 +55,14 @@ wss.on('connection', (ws: WebSocket) => {
         extWs.isAlive = true;
     });
 
+    // Call for unique ID for session for Rasa
+
+
     //connection is up, let's add a simple simple event
     ws.on('message', (msg: string) => {
 
         const message = JSON.parse(msg) as Message;
-        console.log(`User Connected: ${message}`);
+        // console.log(`User Connected: ${message}`);
         setTimeout(() => {
             if (message.isBroadcast) {
 
@@ -61,10 +77,10 @@ wss.on('connection', (ws: WebSocket) => {
             }
 
 
-            testHttpPost().then(function(result: any){
+            testHttpPost(message.content, uniqueID).then(function(result: any){
                 // message.content = result;
-                console.log(JSON.stringify(result));
-                ws.send(createMessage(`You sent -> ${JSON.stringify(result)}`, message.isBroadcast));
+                // ws.send(createMessage(`You sent -> ${JSON.parse(result)}`, message.isBroadcast));
+                ws.send(createMessage(`${result}`, message.isBroadcast));
             });
         }, 1000);
     });
@@ -98,16 +114,18 @@ wss.on('connection', (ws: WebSocket) => {
 // }
 
 
-function testHttpPost(){
+function testHttpPost(userMessage: string, uniqueID: string){
+    var botMessage = '';
+
     const data = JSON.stringify({
-        user: 'shashank',
-        id: '492239'
+        sender: uniqueID,
+        message: userMessage
     });
 
     const options = {
         hostname: 'localhost',
         port: 5005,
-        path: '/postrequest',
+        path: '/webhooks/rest/webhook',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -116,7 +134,7 @@ function testHttpPost(){
     }
 
     var deferred = Q.defer();
-    var url = 'http://localhost:7000/testapi';
+    // var url = 'http://localhost:7000/testapi';
     
     var postReq = http.request(options, function(res) {
         var str = '';
@@ -126,7 +144,14 @@ function testHttpPost(){
         });
         
         res.on('end', function () {
-            deferred.resolve(str);
+            var obj = JSON.parse(str);
+            // console.log(obj[0]['text']);
+            botMessage = obj[0]['text'];
+            console.log(botMessage)
+            
+            deferred.resolve(botMessage);
+            // console.log(str);
+            // console.log(`Response returned + ${str}`);
         });
     });
     
@@ -137,6 +162,7 @@ function testHttpPost(){
     postReq.write(data);
     postReq.end();
 
+    
 	return deferred.promise;
 }
 
