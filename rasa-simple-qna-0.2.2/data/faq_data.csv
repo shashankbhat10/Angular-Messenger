@@ -30,6 +30,17 @@ git push origin branch-name",1,http://gitfaq.org/articles/how-do-i-push-my-chang
 How do I completely reset my local repository?,git reset git checkout . git clean -fdx,1,http://gitfaq.org/articles/how-do-i-reset-my-local-repository.html
 What is litmust?,test automation tool,1,http://gitfaq.org/articles/how-do-i-reset-my-local-repository.html
 What are the functions of litmust?,automate all the tests,1,http://gitfaq.org/articles/how-do-i-reset-my-local-repository.html
-How to create test plan?,Answer related to Test Plan 1 ,,
-How to create test case,Answer related to Test Case 2,,
-How to create test suite?,Answer related to Test Suite 3,,
+What are the test types supported?,"Test Types supported include Sanity Testing, System Testing and E2E Testing",,
+How to pull test cases?,"Pull all test cases from Test Lab of HP ALM using script and bring into LitmusT DB. Once upload is successful, Auto
+Scripting initiates automatically and marks Test Case Ready for Execution (if Test Data is available)",,
+How to pull test data?,"Pull Test Data from Test Lab of HP ALM and Links it to test case; Mark it ready for Execution (if Scripting is
+successful)",,
+What does litmust monitor?,"LitmusT monitors various parameters like Test Case Count, Test Case Count having Scripting In-Error, In Complete Plans, Passed Test Case Count, Failed Test Case Count and Recurrence Test Case Count on Home page",,
+What is LitmusT's Planning and scheduling feature?,"Feature to Create Execution Plan for Execution. It is 5-steps process. User can trigger execution at step 3, provided Data and Execution Machine is available.",,
+what are the features of test case?,Test Case module is the key part and have following features: Upload Test Case (in xlsx format) Upload (in xlsx format) and Link Test Data Pull Test Case(s) and respective Test Data from HP ALM Edit Test Case (to resolve Fallout) Re-Trigger Automation Scripting,,
+What is manager role allowed to do?,"Manager is allowed to: View Test Cases, Dictionary, Objects View Execution Plan, Test Cases, Result(s)",,
+What is tester allowed to do,"Tester is allowed to : Upload Test Case (in xlsx format), Upload (in xlsx format), and Link Test Data, Pull Test Case(s) and respective Test Data from HP ALM, Edit Test Case (to resolve Fallout), Re-Trigger Automation Scripting, View Dictionary, View Object Repository, Create/Edit Execution Plan, Trigger Execution, Re-Run Execution, Test Result, Evaluate Result, Upload to HP ALM",,
+What is machine,Execution Machine (now called Agent) where execution is being planned,,
+What is environment,Test Environment where application will be tested,,
+What is project,"A Project under a release for each impacted application; Each Testing Group, need to create a Project is there is testing scope for Code or Test Only impacted application",,
+What is application objects,Application Objects is a module facilitates user to maintain application objects centrally and each testing group sharing application using same instance of object repository,,
