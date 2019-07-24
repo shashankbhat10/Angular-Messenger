@@ -2,12 +2,18 @@ import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angula
 import { WebSocketSubject } from 'rxjs/observable/dom/WebSocketSubject';
 import { HttpClient } from '@angular/common/http';
 
+// import * as log4js from 'log4js';
+// log4js.configure('./config/log4j.json');
+
+// var logger = log4js.getLogger( "test-file-appender" );
+
 export class Message {
     constructor(
         public sender: string,
         public content: string,
-        public isBroadcast = false
-    ) { }
+        // public isBroadcast = false,
+        public date: Date
+    ){} 
 }
 
 @Component({
@@ -22,14 +28,16 @@ export class AppComponent implements AfterViewInit {
     public serverMessages = new Array<Message>();
 
     public clientMessage = '';
-    public isBroadcast = false;
-    public sender = '';
+    // public isBroadcast = false;
+    public sender = 'User';
 
     private socket$: WebSocketSubject<Message>;
 
     constructor(private http: HttpClient) {
     
         this.socket$ = new WebSocketSubject('ws://localhost:8999');
+        
+        console.log('WebSocket created from client');
 
         this.socket$
             .subscribe(
@@ -43,16 +51,16 @@ export class AppComponent implements AfterViewInit {
         this.scroll();
     }
 
-    public toggleIsBroadcast(): void {
-        this.isBroadcast = !this.isBroadcast;
-    }
+    // public toggleIsBroadcast(): void {
+    //     this.isBroadcast = !this.isBroadcast;
+    // }
 
     public send(): void {
-        this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((result: any) => {
-           console.log(JSON.stringify(result));
-        });
 
-        const message = new Message(this.sender, this.clientMessage, this.isBroadcast);
+        const message = new Message(this.sender, this.clientMessage, new Date());
+
+        // console.log(new Date());
+        // logger.info('message');
 
         this.serverMessages.push(message);
         this.socket$.next(message);
@@ -65,6 +73,7 @@ export class AppComponent implements AfterViewInit {
     }
 
     public getSenderInitials(sender: string): string {
+        console.log(sender);
         return sender && sender.substring(0, 2).toLocaleUpperCase();
     }
 

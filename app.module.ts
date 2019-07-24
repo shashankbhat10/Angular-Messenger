@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatInputModule, MatButtonToggleModule, MatIconModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-
+// import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { AppComponent } from './app.component';
         MatIconModule,
         MatInputModule,
         MatCheckboxModule,
-        HttpClientModule
+        HttpClientModule,
+        // AngularFontAwesomeModule
     ],
     providers: [],
     bootstrap: [AppComponent]

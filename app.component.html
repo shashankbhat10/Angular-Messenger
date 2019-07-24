@@ -1,33 +1,43 @@
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 <div class="container">
-    <div class="header">
-      <mat-form-field>
-        <input matInput placeholder="Your name here" type="text" [(ngModel)]="sender" [ngModelOptions]="{updateOn: 'blur'}">
-      </mat-form-field>
-    </div>
-    <!-- <div *ngIf="!!sender" #viewer class="body"> -->
-    <div #viewer class="body">
-      <div class="viewer">
-        <div class="message" *ngFor="let msg of serverMessages" [ngClass]="{'bold': msg.isBroadcast, 'others': !isMine(msg)}">
-          <div class="badge" [style.backgroundColor]="getSenderColor(msg.sender)">{{ getSenderInitials(msg.sender) }}</div>
-          <div class="content" [ngClass]="{'bold': msg.isBroadcast, 'others': !isMine(msg)}">
-            <i *ngIf="msg.isBroadcast" class="material-icons">speaker_phone</i>
-            <span>{{ msg.content }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- <div *ngIf="!!sender" class="footer"> -->
-    <div class="footer">
-      <form (submit)="send()">
-        <mat-form-field>
-          <input name="clientMessage" matInput placeholder="Write a message" type="text" [(ngModel)]="clientMessage" autocomplete="off">
-        </mat-form-field>
-        <button mat-fab type="submit">
-          <i class="material-icons">send</i>
-        </button>
-        <button mat-fab (click)="toggleIsBroadcast()" type="button" [ngClass]="{'disabled': !isBroadcast}">
-          <i class="material-icons">speaker_phone</i>
-        </button>
-      </form>
-    </div>
-  </div>
+	<div class="header">
+		Litmus Bot
+		<!-- <mat-form-field>
+      <input matInput placeholder="Your name here" type="text" [(ngModel)]="sender" [ngModelOptions]="{updateOn: 'blur'}">
+    </mat-form-field> -->
+	</div>
+	<!-- <div *ngIf="!!sender" #viewer class="body"> -->
+	<div #viewer class="body">
+		<div class="viewer ">
+			<div class="message" *ngFor="let msg of serverMessages" [ngClass]="{'bold': msg.isBroadcast, 'others': !isMine(msg)}">
+				<!-- <div class="badge" [style.backgroundColor]="getSenderColor(msg.sender)">{{ getSenderInitials(msg.sender) }}</div> -->
+				
+				<div class="content" [ngClass]="{'bold': msg.isBroadcast, 'others': !isMine(msg)}">
+					<!-- <i *ngIf="msg.isBroadcast" class="material-icons">speaker_phone</i> -->
+					<span>
+						<span [style.color]="getSenderColor(msg.sender)"><b>{{ msg.sender }}({{msg.date | date:'hh:mm:ss a'}}): </b></span>
+						{{ msg.content }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div *ngIf="!!sender" class="footer"> -->
+	<div class="footer">
+		<form (submit)="send()">
+			<mat-form-field>
+				<input name="clientMessage" matInput placeholder="Write a message" type="text" [(ngModel)]="clientMessage" autocomplete="off">
+			</mat-form-field>
+			<button type="submit">
+				<i class="material-icons">call_made</i>
+				<!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> -->
+			</button>
+			<!-- <button mat-fab (click)="toggleIsBroadcast()" type="button" [ngClass]="{'disabled': !isBroadcast}">
+				<i class="material-icons">speaker_phone</i>
+			</button> -->
+		</form>
+	</div>
+</div>
+
+<!-- <image class="chatbot-image"></image> -->

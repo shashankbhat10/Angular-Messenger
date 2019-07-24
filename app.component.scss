@@ -1,91 +1,155 @@
 
 .container {
-  display: flex;
-  justify-self: center;
-  width: 40%;
-  background-color: green;
-  flex-flow: column;
+	display: flex;
+	// justify-self: center;
+	width: 40%;
+	background-color: beige;
+	flex-flow: column;
+	height: fit-content;
 }
 
-.header,
-.footer {
-  background-color: #555;
-  padding: 1rem;
-  display: flex;
-  justify-self: center;
-  line-height: 2rem;
-  border-bottom: 1px solid #444;
-  & mat-form-field {
-    flex: 1;
-    margin-left: .5rem;
-    font-size: 1rem;
-  }
-  form {
-    display: flex;
-    width: 100%;
-    & mat-form-field {
-      flex: 1;
-    }
-  }
-  mat-icon {
-    line-height: 3.5rem;
-    font-size: 2rem;
-    margin-left: 2rem;
-  }
-  button {
-    &.disabled {
-      background-color: #666;
-    }
-    margin-left: 2rem;
-  }
+.header {
+	background-color: rgb(2, 101, 131);
+	padding-top: 0.5rem;
+	padding-left: 1rem;
+	padding-bottom: 0rem;
+	height: 2.5rem;
+	display: flex;
+	justify-self: center;
+	line-height: 2rem;
+	border-bottom: 1px solid #444;
+	& mat-form-field {
+		flex: 1;
+		margin-left: .5rem;
+		font-size: 1rem;
+  	}
+  	form {
+		display: flex;
+    	width: 100%;
+    	& mat-form-field {
+      		flex: 1;
+    	}
+  	}
+  	mat-icon {
+    	line-height: 3.5rem;
+		font-size: 2rem;
+    	margin-left: 2rem;
+  	}
+  	button {
+    	&.disabled {
+      		background-color: #666;
+		}
+		margin-left: 0.5rem;
+		margin-right: 1rem;
+		margin-top: 0.5rem;
+  	}
+}
+
+.footer{
+	background-color: rgb(2, 101, 131);
+	color: black;
+	// padding-top: 0.2rem;
+	// padding-left: 0.5rem;
+	font-family: Consolas;
+	height: 4rem;
+	form {
+		padding: 0.5rem;
+		display: flex;
+		width: 95%;
+		height: 90%;
+    	& mat-form-field {
+			  flex: 1;
+			  width: 20%;
+		}
+		& mat-form-field:active{
+			background-color: black;
+		}
+		button{
+			align-self: auto;
+			padding: 0.5rem;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 3rem;
+		}
+	}
 }
 
 .body {
-  min-height: 30rem;
-  max-height: 40rem;
-  background-color: #454545;
-  display: flex;
-  flex-flow: column;
-  overflow-y: auto;
-  & .viewer {
-    display: flex;
-    flex-direction: column;
-    flex: none;
-    & .message {
-      width: 60%;
-      display: flex;
-      flex-flow: row;
-      margin: .5rem;
-      & .content {
-        padding: .75rem;
-        min-height: 2rem;
-        margin-left: .5rem;
-        margin-right: .5rem;
-        line-height: 2rem;
-        background-color: rgb(121, 69, 128);
-        display: flex;
-        flex: 1; //   &.others {
-        //     align-self: flex-end;
-        //     background-color: rgb(69, 128, 103);
-        //   }
-      }
-      &.others {
-        & .content {
-          align-self: flex-end;
-          background-color: rgb(69, 128, 103);
-        }
-        flex-direction: row-reverse;
-        align-self: flex-end;
-      }
-      & .badge {
-        border-radius: 50%;
-        background-color: #888;
-        width: 3.5rem;
-        height: 3.5rem;
-        text-align: center;
-        line-height: 3.5rem;
-        font-size: 1.5rem;
-      }
-    }
-  }
+	min-height: 30rem;
+	max-height: 30rem;
+	background-color: beige;
+	display: flex;
+	flex-flow: column;
+	overflow-y: auto;
+	& .viewer {
+		display: flex;
+		flex-direction: column;
+    	flex: none;
+    	& .message {
+			color: black;
+			width: 95%;
+			display: flex;
+			flex-flow: row;
+			padding-top:0.2rem;
+			margin-top: 0.0rem;
+			margin-left: 0.2rem; 
+			// margin-bottom: 0.0rem;
+     		& .content {
+				padding-top: .2rem;
+				// padding-bottom: .2rem;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+        		min-height: 1.5rem;
+        		margin-left: 0rem;
+        		margin-right: 0rem;
+        		line-height: 1.3rem;
+        		// background-color: rgb(121, 69, 128);
+        		display: flex;
+        		font-family: Consolas;
+				flex: 1; 
+				border-radius: 0.6em;
+      		}
+      		&.others {
+        		& .content {
+          			align-self: flex;
+         			// background-color: rgb(113, 167, 149);
+        		}
+        		flex-direction: row-reverse;
+       			align-self: flex;
+      		}
+      		// & .badge {
+        	// 	border-radius: 50%;
+        	// 	background-color: #888;
+        	// 	width: 3.5rem;
+        	// 	height: 3.5rem;
+        	// 	text-align: center;
+        	// 	line-height: 3.5rem;
+       		// 	font-size: 1.5rem;
+      		// }
+    	}
+  	}
 }
+
+
+#message-sender{
+	font-weight: bold;
+}
+
+// .chat-triangle{
+// 	height: 2px;
+// 	width: 2px;
+// 	background-color: black;
+// }
+
+// .tri-right.left-top:after{
+// 	content: ' ';
+// 	position: relative;
+// 	width: 0;
+// 	height: 0;
+//   	left: 24px;
+// 	right: auto;
+//   	top: 0px;
+// 	bottom: auto;
+// 	border: 22px solid;
+// 	border-color: rgb(113, 167, 149) transparent transparent transparent;
+// }
